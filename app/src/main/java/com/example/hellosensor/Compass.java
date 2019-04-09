@@ -71,12 +71,12 @@ public class Compass extends AppCompatActivity implements SensorEventListener {
             if(vibrate) {
                 vibrator.vibrate(500);
                 vibrate = false;
-            }
+            } //kvar i intervallet? kommer inte vibrera mer.
           }
             else {
                 vibrate = true;
         }
-        //kvar i intervallet? kommer inte vibrera mer.
+
         if (mAzimuth < 350 && mAzimuth > 280)
             where = "NW";
         if (mAzimuth <= 280 && mAzimuth > 260)
@@ -91,8 +91,6 @@ public class Compass extends AppCompatActivity implements SensorEventListener {
             where = "E";
         if (mAzimuth <= 80 && mAzimuth > 10)
             where = "NE";
-
-
         txt_compass.setText(mAzimuth + "° " + where);
     }
 

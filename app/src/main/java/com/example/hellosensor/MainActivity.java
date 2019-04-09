@@ -18,4 +18,8 @@ public void sendToCompass(View view){
     startActivity(intent);
 }
 
+public void sentToAccelerometer(View view){
+    Intent intent = new Intent(this, Accelerometer.class);
+    startActivity(intent);
+}
 }
